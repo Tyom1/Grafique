@@ -12,17 +12,33 @@
 </head>
 
 <body>
+
+
+    <a class="button_up">
+        <i class="fas fa-chevron-up"></i>
+    </a>
     <!--******************************************************************************
         Pos_header section
      **************************************************************************-->
     <section class="pos_header">
         <div class="burg_logo">
-            <img src="img/burger_menu.png" alt="">
+            <i class="fas fa-bars"></i>
         </div>
         <div class="pos_search">
             <a href="#"><i class="fas fa-search"></i></a>
         </div>
     </section>
+    <nav class="pos_nav">
+        <ul>
+            <li><i class="fas fa-times" id="close"> </i></li>
+            <li><a href="#home" class="js-scroll-to-form">home</a></li>
+            <li><a href="#about"class="js-scroll-to-form">about</a></li>
+            <li><a href="#project"class="js-scroll-to-form">projects</a></li>
+            <li><a href="#our"class="js-scroll-to-form">our team</a></li>
+            <li><a href="#contact"class="js-scroll-to-form">contact us</a></li>
+            <li><a href="#blog"class="js-scroll-to-form">blog</a></li>
+        </ul>
+    </nav>
 
     <!-- ******************************************************
         header section
@@ -36,12 +52,12 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">our team</a></li>
-                    <li><a href="#">contact us</a></li>
-                    <li><a href="#">blog</a></li>
+                    <li><a href="#home" class="js-scroll-to-form">home</a></li>
+                    <li><a href="#about"class="js-scroll-to-form">about</a></li>
+                    <li><a href="#project"class="js-scroll-to-form">projects</a></li>
+                    <li><a href="#our"class="js-scroll-to-form">our team</a></li>
+                    <li><a href="#contact"class="js-scroll-to-form">contact us</a></li>
+                    <li><a href="#blog"class="js-scroll-to-form">blog</a></li>
                 </ul>
             </nav>
             <div class="search">
@@ -100,7 +116,7 @@
         experience section
  **********************************************************-->
 
-    <section class="experience">
+    <section class="experience" id="about">
         <div class="container experience_container">
             <div class="experience_number">
                 <span>19</span>
@@ -129,7 +145,7 @@
     <!-- ******************************************************
         bold projects section
  **********************************************************-->
-    <section class="bold_projects container">
+    <section class="bold_projects container" id="project">
 
         <div class="left_text">
 
@@ -157,30 +173,20 @@
     <!-- ******************************************************
         Achivment section
  **********************************************************-->
-    <section class="achivment">
+    <section class="achievements">
         <h2>achievements</h2>
-
-        <div class="counter">
-
-            <div class="counter_item1">
-                <p>
-                    <span class="item_num">185</span>
-                    <span class="item_text">projects</span>
-                </p>
+        <div class="achievements_counter">
+            <div class="counter_item">
+                <div class="counter" data-count="185">0</div>
+                <div class="counter_text">Projects</div>
             </div>
-
-            <div class="counter_item2">
-                <p>
-                    <span class="item_num">17</span>
-                    <span class="item_text">employees</span>
-                </p>
+            <div class="counter_item">
+                <div class="counter" data-count="17">0</div>
+                <div class="counter_text">Employees</div>
             </div>
-
-            <div class="counter_item3">
-                <p>
-                    <span class="item_num">39</span>
-                    <span class="item_text">contractors</span>
-                </p>
+            <div class="counter_item">
+                <div class="counter" data-count="39">0</div>
+                <div class="counter_text">Contractors</div>
             </div>
         </div>
     </section>
@@ -243,7 +249,7 @@
     <!-- ******************************************************
     Team section******************************************************************
  **********************************************************-->
-    <section class="team">
+    <section class="team" id="our">
 
         <div class="team_article_1">
             <div class="team_title">
@@ -284,7 +290,7 @@
     <!-- ******************************************************
     Map_contacts section******************************************************************
  **********************************************************-->
-    <section class="map_contacts">
+    <section class="map_contacts" id="contact">
 
         <div class="map_contacts_article_1">
 
@@ -326,7 +332,7 @@
             </div>
         </div>
 
-        <div class="map_contacts_article_2">
+        <div class="map_contacts_article_2" id="blog">
 
             <div class="article_2_title">
 
@@ -354,23 +360,25 @@
     <!-- ******************************************************
     Footer******************************************************************
  **********************************************************-->
-    <footer>
+    <footer>      
         <div class="footer_logo">
-            <img src="img/logo.PNG" alt="footer_logo">
-            <p>architect</p>
-        </div>
-
-        <div class="finish_part">
-            <p>
-                <span>zemez</span> &copy;. All rights reserved 
-            </p>
-            <div class="soc_media footer_soc">
-                <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="twit"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+            <figure><img src="img/logo.png"></figure>
+            <p>Architect</p>
+        </div>        
+        <div class="copyright">
+            <div>
+                <p><span>Zemez </span> © .All rights reserved.</p>
+            </div>
+            <div class="footer_icon_div">
+                <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="instagram" href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
+
     </footer>
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">

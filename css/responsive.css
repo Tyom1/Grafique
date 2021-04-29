@@ -34,39 +34,34 @@
     .experience_number > span:nth-child(3){
         font-size: 19px;
     }
-    .experience_title{
+    .experience_title, .experience_text{
         width: 30%;
     }
     .welcome{
         font-size: 20px;
         margin-bottom: 12%;
     }
-    .min_text{
+    .min_text, .max_text{
         font-size: 50px;
-    }
-    .max_text{
-        font-size: 50px;
-    }
-    .experience_text{
-        width: 30%;
     }
     /******************************************************************************* 
     achivment secton 
     ********************************************************************************/
-    .item_text{
-        font-size: 42px;
-    }
+    .achievements_container{
+        padding: 0 3em;
+      }
+      .counter{
+        font-size: 35px;
+      }
+      .counter_text{
+        font-size: 30px;
+      }
     /* *****************************************************************************
     Team section
     ********************************************************************************/
     .team_text{
         font-size: 55px;
     }    
-   }
-   @media (min-width: 768px) and (max-width: 1214px) {
-       /* .soc_media{
-           border: none;
-       } */
    }
    @media (min-width: 768px) and (max-width: 1024px) {
         header{
@@ -84,6 +79,7 @@
             font-size: 13px;
         }
         .header_container{
+            width: 90%;
             justify-content: center;
         }
         .search{
@@ -158,15 +154,15 @@
             /******************************************************************************* 
         achivment secton 
         ********************************************************************************/
-        .achivment > h2{
-            letter-spacing: 30px;
-        }
-        .item_num{
+        .achievements_container{
+            padding: 0;
+          }
+          .counter{
             font-size: 30px;
-        }
-        .item_text{
-            font-size: 25px;
-        }
+          }
+          .counter_text{
+            font-size: 30px;
+          }
         /* ***************************************************************************************
         Gallery section
         ************************************************************************************** */
@@ -265,49 +261,12 @@
         .user_info{
             width: 100%;
         }
+        .user_info .send_but{
+            margin-bottom: 60px;
+        }
         .article_2_title > h2{
             font-size: 40px;
-        }
-        /* *****************************************************************************************
-        Footer
-        ************************************************************************************** */
-        footer{
-            background-color: #0E0E0E;
-            height: auto;
-            padding: 1% 5%;
-            margin-top: 10%;
-        }
-        .footer_logo{
-            display: flex;
-            flex-direction: column;
-            padding: 2% 0;
-        }
-        .footer_logo img{
-            border: none;
-            width: 20%;
-            margin: auto;
-        }
-        .footer_logo p{
-            padding: 0;
-            font-size: 14px;
-        }
-        .finish_part{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 1.5%;
-        }
-        .finish_part p{
-            text-align: center;
-        }
-        .footer_soc{
-            padding: 0;
-            width: 20%;
-            margin: auto;
-        }
-        .footer_soc > a{
-            color: #757575;
-        }
+        }        
    }
 
    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
@@ -346,10 +305,11 @@
         padding: 2em 5em;
         height: 12em;
         display: block;
-        margin-top: 15%;
+        margin-top: 12%;
     }
     .header_container{
         justify-content: center;
+        flex-direction: column;
     }
     header nav{
         display: none;
@@ -484,38 +444,18 @@
         /******************************************************************************* 
     achivment secton 
     ********************************************************************************/
-    .achivment{
-        width: 100%;
-        padding: 5%;
-    }
-    .achivment > h2{
-        display: inline-block;
-        font-size: 15px;
-        letter-spacing: 20px;
-        text-align: center;
-        margin: 0 5%;
-    }
-    .counter{
-        margin: 3em auto;
+    .achievements h2{
+        letter-spacing: 15px;
+      }
+      .achievements_counter{
         display: block;
-        width: 100%;
-        line-height: 2;
-    }
-    .counter_item1, .counter_item2, .counter_item3{
-        text-align: center;
-    }
-    .counter_item2{
-        margin: 5% 0;
-    }
-    .item_num{
-        display: block;
-        font-size: 50px;
-    }
-    .item_text{
-        display: block;
-        font-size: 35px;
-        line-height: 0.2;
-    }
+      }
+      .counter_text{
+        font-size: 30px;
+      }
+      .achievements_container{
+        padding: 0;
+      }
     
     /* ***************************************************************************************
     Gallery section
@@ -565,12 +505,15 @@
         display: block;
         width: 100%;
     }
-    .team_article_2 img{
+    /* .team_article_2 img{
         max-width: 100%;
-    }
+    } */
     .adam,.perry{
         width: 90%;
         margin: 5% auto;
+    }
+    .perry img{
+        width: 100%;
     }
 
     .architect_h2{
@@ -638,6 +581,9 @@
     .user_info{
         width: 100%;
     }
+    .user_info .send_but{
+        margin-bottom: 60px;
+    }
     .article_2_title > h2{
         font-size: 40px;
     }
@@ -645,46 +591,30 @@
     Footer
     ************************************************************************************** */
     footer{
-        background-color: #0E0E0E;
-        height: auto;
-        padding: 1% 5%;
-        margin-top: 10%;
-    }
-    .footer_logo{
-        display: flex;
-        flex-direction: column;
-        padding: 2% 0;
-    }
-    .footer_logo img{
-        border: none;
-        width: 40%;
-        margin: 2% auto;
-    }
-    .footer_logo p{
-        padding: 0;
-        font-size: 15px;
-    }
-    .finish_part{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1.5% 0;
-        margin: 2% 0;
-    }
-    .finish_part p{
-        font-size: 16px;
+        padding: 2em 0;
         text-align: center;
-        margin-bottom: 5%;
-    }
-    .footer_soc{
-        padding: 3% 0;
-        width: 20%;
-        margin: auto;
-    }
-    .footer_soc > a{
-        font-size: 15px;
-        color: #757575;
-    }       
+      }
+      .copyright{
+        display: block;
+      }
+      .footer_logo{
+        display: block;
+      }
+      .footer_logo p{
+        border: none;
+        display: block;
+        margin-inline-start: 0; 
+        margin-block-end: 0; 
+        padding: 0
+      }
+      footer figure{
+        margin-inline-start: 40px;
+        margin-inline-end: 40px;
+      }
+      .footer_icon_div{
+          margin-top: 20px;
+      }
+    
    }
    @media (min-width: 314px) and (max-width: 424px) {
        
@@ -721,7 +651,7 @@
         padding: 2em 5em;
         height: 10em;
         display: block;
-        margin-top: 15%;
+        margin-top: 12%;
     }
     .header_container{
         justify-content: center;
@@ -803,10 +733,9 @@
     .welcome{
         letter-spacing: 18px;
     }
-    /* .min_text{
-        font-size: 44px;
-        font-weight: 500;
-    } */
+    .min_text,.max_text{
+        font-size: 40px;
+    }
     /* .max_text{
         font-size: 44px;
         font-weight: 800;
@@ -846,25 +775,18 @@
         /******************************************************************************* 
     achivment secton 
     ********************************************************************************/
-    .achivment{
-        padding: 5%;
-    }
-    .achivment > h2{
-        display: inline-block;
-        letter-spacing: 10px;
-        margin: 0 5%;
-    }
-    .counter{
-        margin: 3em auto;
+    .achievements h2{
+        letter-spacing: 5px;
+      }
+      .achievements_counter{
         display: block;
-    }
-    .counter_item2{
-        margin: 5% 0;
-    }
-    .item_text{
-        font-size: 35px;
-        line-height: 0.2;
-    }
+      }
+      .counter_text{
+        font-size: 30px;
+      }
+      .achievements_container{
+        padding: 0;
+      }
     
     /* ***************************************************************************************
     Gallery section
@@ -892,7 +814,7 @@
         text-align: center;
     }
     .team_text{
-        font-size: 40px;
+        font-size: 35px;
         text-align: center;
     }
     .team_article_1{
@@ -943,6 +865,9 @@
     .user_info{
         width: 100%;
     }
+    .user_info .send_but{
+        margin-bottom: 60px;
+    }
     .article_2_title > h2{
         font-size: 40px;
     }
@@ -950,39 +875,24 @@
     Footer
     ************************************************************************************** */
     footer{
-        padding: 1% 5%;
-        margin-top: 10%;
-    }
-    .footer_logo{
-        display: flex;
-        flex-direction: column;
-        padding: 2% 0;
-    }
-    .footer_logo img{
-        border: none;
-        width: 40%;
-        margin: 2% auto;
-    }
-    .footer_logo p{
-        padding: 0;
-        font-size: 15px;
-    }
-    .finish_part{
-        flex-direction: column;
-        padding: 1.5% 0;
-        margin: 2% 0;
-    }
-    .finish_part p{
-        font-size: 16px;
+        padding: 2em 0;
         text-align: center;
-        margin-bottom: 5%;
-    }
-    .footer_soc{
-        padding: 3% 0;
-        width: 20%;
-        margin: auto;
-    }
-    .footer_soc > a{
-        font-size: 15px;
-    }       
+      }
+      .copyright{
+        display: block;
+      }
+      .footer_logo{
+        display: block;
+      }
+      .footer_logo p{
+        border: none;
+        display: block;
+        margin-inline-start: 0; 
+        margin-block-end: 0; 
+        padding: 0;
+      }
+      footer figure{
+        margin-inline-start: 40px;
+        margin-inline-end: 40px;
+      }       
    }
